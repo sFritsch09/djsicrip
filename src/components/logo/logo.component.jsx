@@ -195,7 +195,7 @@ const Logo = () => {
 					<VinylImg />
 				</VinylWrapper>
 			</MainContainer>
-			<VinylWrapper className="mobile" animate={animate} onTap={() => cycle()}>
+			<VinylWrapper animate={animate} onTap={() => cycle()}>
 				<VinylImg />
 			</VinylWrapper>
 		</div>
