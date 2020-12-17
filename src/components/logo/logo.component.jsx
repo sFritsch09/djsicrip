@@ -195,9 +195,6 @@ const Logo = () => {
 					<VinylImg />
 				</VinylWrapper>
 			</MainContainer>
-			<VinylWrapper animate={animate} onTap={() => cycle()}>
-				<VinylImg />
-			</VinylWrapper>
 		</div>
 	);
 };
