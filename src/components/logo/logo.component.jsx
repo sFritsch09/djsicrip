@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useCycle } from 'framer-motion';
 import { LogoContainer, VinylImg, VinylWrapper, MainContainer } from './logo.styles';
 
 const pathVariants = {
@@ -51,8 +51,12 @@ const vinylMotion = {
 };
 
 const Logo = () => {
+	const [animate, cycle] = useCycle(
+		{ scale: 1, rotate: 0 },
+		{ rotate: 360, transition: { ease: 'linear', duration: 2, loop: Infinity } }
+	);
 	return (
-		<MainContainer initial="rest" animate="rest" whileHover="hover" onTap="hover">
+		<MainContainer initial="rest" animate="rest" whileHover="hover">
 			<LogoContainer variants={textMotion}>
 				<motion.svg
 					className="logo"
@@ -186,7 +190,7 @@ const Logo = () => {
 					</g>
 				</motion.svg>
 			</LogoContainer>
-			<VinylWrapper variants={vinylMotion}>
+			<VinylWrapper variants={vinylMotion} animate={animate} onTap={() => cycle()}>
 				<VinylImg />
 			</VinylWrapper>
 		</MainContainer>
