@@ -10,6 +10,7 @@ export const MainContainer = styled(motion.div)`
 	height: 400px;
 	padding: 10px;
 	margin: auto;
+	cursor: pointer;
 	/* border: 3px solid blue; */
 `;
 
