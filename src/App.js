@@ -1,12 +1,20 @@
 import React from 'react';
-import { Logo } from './components';
 import GlobalStyle from './globalStyles';
+import { Route, Switch } from 'react-router-dom';
+import { Logo, Navbar } from './components';
+import { ThemeProvider } from 'styled-components';
 
 function App() {
 	return (
 		<div>
-			<GlobalStyle />
-			<Logo />
+			<ThemeProvider theme={invertTheme}>
+				<GlobalStyle />
+				<Navbar />
+				<Switch>
+					<Route exact path="/" />
+				</Switch>
+				<Logo />
+			</ThemeProvider>
 		</div>
 	);
 }

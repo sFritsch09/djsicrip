@@ -9,4 +9,12 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 
+// export const theme = {
+// 	color: '#006d77',
+// };
+
+// export const invertTheme = styled.css`
+// 	color: #edf6f9;
+// `;
+
 export default GlobalStyle;

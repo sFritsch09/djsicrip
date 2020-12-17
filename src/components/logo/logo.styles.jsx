@@ -31,7 +31,7 @@ export const VinylWrapper = styled(motion.div)`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	top: 120px;
+	top: 180px;
 `;
 
 export const VinylImg = styled(Vinyl)`
