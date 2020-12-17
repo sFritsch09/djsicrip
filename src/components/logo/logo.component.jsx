@@ -52,7 +52,7 @@ const vinylMotion = {
 
 const Logo = () => {
 	return (
-		<MainContainer initial="rest" animate="rest" whileHover="hover" onTouchStart="hover">
+		<MainContainer initial="rest" animate="rest" whileHover="hover" onClick="hover">
 			<LogoContainer variants={textMotion}>
 				<motion.svg
 					className="logo"
