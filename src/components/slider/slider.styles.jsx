@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import Label from '../../images/Crip-Beatz.png';
 import Background from '../../images/Background-Gradient.jpg';
+import { ReactComponent as Logo } from '../../images/sicriptext.svg';
+import { BsArrowBarLeft } from 'react-icons/bs';
 
 export const SectionBg = styled.div`
 	position: absolute;
@@ -13,6 +15,7 @@ export const SectionBg = styled.div`
 	background-size: cover;
 	background-repeat: no-repeat;
 	mix-blend-mode: multiply;
+	background-image: url(${Label});
 `;
 
 export const SectionOverlay = styled.div`
@@ -20,31 +23,87 @@ export const SectionOverlay = styled.div`
 	top: 0;
 	left: 0;
 	right: 0;
+	margin: auto;
 	bottom: 0;
 	z-index: 1;
-	min-height: 1px;
+	width: 800px;
+`;
+
+const ArrowLeft = styled(BsArrowBarLeft)`
+	width: 30px;
 `;
 
 export const SectionOverlayWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	min-height: 100%;
-	justify-content: flex-end;
+	align-items: center;
 	width: 100%;
 	padding: 0 30px;
 	max-width: 1280px;
 `;
 
 export const Container = styled.div`
-	margin: auto;
 	padding: 0 30px;
-	border: 2px solid blue;
 	position: relative;
 	top: 200px;
 	height: 300px;
+
+	.slick-slide {
+		position: relative;
+	}
+
+	.arrow-left {
+		bottom: 0;
+		font-size: 24px;
+	}
+
+	.arrow-right {
+		font-size: 24px;
+		color: white;
+	}
+
+	.slick-prev {
+		font-size: 24px;
+		color: white;
+		left: 200px;
+		top: 300px;
+		z-index: 2;
+	}
+	.slick-next {
+		font-size: 24px;
+		color: white;
+		right: 200px;
+		top: 300px;
+		z-index: 2;
+	}
+
+	.slick-prev:before,
+	.slick-next:before {
+		content: '' !important;
+	}
 `;
 
 export const ImgOne = styled.img`
-	background: url(${Label});
+	background-image: url(${Label});
+	width: 100%;
+	height: 300px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	background-position: 50% 50%;
 	background-size: cover;
+	background-repeat: no-repeat;
+	mix-blend-mode: multiply;
+`;
+
+export const ImgTwo = styled.img`
+	width: 1000px;
+	background-image: url(${Background});
+`;
+
+export const ImgLogo = styled(Logo)`
+	width: 400px;
+	height: 50%;
 `;
