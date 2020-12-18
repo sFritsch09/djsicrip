@@ -1,21 +1,9 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../images/sicriptext.svg';
-import BgImg from '../../images/Background-Gradient.jpg';
-
-export const theme = {
-	text: '#006d77',
-	darkText: '#edf6f9',
-};
-
-// This theme swaps `fg` and `bg`
-export const invertTheme = {
-	text: '#edf6f9',
-	darkText: '#006d77',
-};
+// import BgImg from '../../images/Background-Gradient.jpg';
 
 export const Nav = styled.nav`
-	/* background: #101522; */
 	height: 80px;
 	width: 100%;
 	display: flex;
@@ -30,7 +18,7 @@ export const Nav = styled.nav`
 
 	&.sticky {
 		padding: 5px 100px;
-		background: #fff;
+		background: ${(props) => props.theme.color};
 	}
 	@media screen and (max-width: 900px) {
 		bottom: 0 !important;
@@ -62,10 +50,12 @@ export const NavIcon = styled(Logo)`
 	transition: 0.6s;
 	margin-right: 0.5rem;
 	width: 100px;
-	color: ${(props) => props.theme.textDark};
+	color: ${(props) => props.theme.color};
 
 	&.sticky {
-		color: black;
+		color: ${(props) => props.theme.Darkcolor};
+		width: 80px;
+		padding-top: 5px;
 	}
 	@media screen and (max-width: 600px) {
 		width: 40px;
@@ -90,7 +80,7 @@ export const NavMenu = styled.ul`
 		left: ${({ click }) => (click ? 0 : '-100%')};
 		opacity: 1;
 		transition: all 0.5s ease;
-		background: #101522;
+		background: ${(props) => props.theme.Darkcolor};
 	}
 `;
 
@@ -112,7 +102,7 @@ export const NavLink = styled(Link)`
 	margin: 0 15px;
 	letter-spacing: 2px;
 	font-weight: 300px;
-	color: ${(props) => props.theme.text};
+	color: ${(props) => props.theme.color};
 	display: flex;
 	align-items: center;
 	text-decoration: none;
@@ -124,7 +114,7 @@ export const NavLink = styled(Link)`
 		display: block;
 		width: 0;
 		height: 3px;
-		background: #006d77;
+		background: ${(props) => props.theme.lightColor};
 		transition: width 0.3s;
 	}
 
@@ -134,7 +124,7 @@ export const NavLink = styled(Link)`
 	}
 
 	&.sticky {
-		color: #006d77;
+		color: ${(props) => props.theme.Darkcolor};
 	}
 
 	@media screen and (max-width: 900px) {
@@ -143,7 +133,7 @@ export const NavLink = styled(Link)`
 		width: 100%;
 		display: table;
 		&:hover {
-			color: #4b59f7;
+			color: ${(props) => props.theme.lightColor};
 			transition: all 0.3s ease;
 		}
 	}
@@ -151,9 +141,9 @@ export const NavLink = styled(Link)`
 
 // Background image
 
-export const BackgroundImg = styled.img`
-	width: 100%;
-	height: 100vh;
-	background: url(${BgImg});
-	background-size: cover;
-`;
+// export const BackgroundImg = styled.img`
+// 	width: 100%;
+// 	height: 100vh;
+// 	background: url(${BgImg});
+// 	background-size: cover;
+// `;

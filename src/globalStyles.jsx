@@ -1,20 +1,33 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Avant Garde', sans-serif;
+	font-weight: bold;
+}
+
+body{
+	background: ${(props) => props.theme.Darkcolor};
 }
 `;
 
-// export const theme = {
-// 	color: '#006d77',
-// };
+export const theme = {
+	Darkcolor: '#006d77',
+	color: '#EDF6F9',
+	lightColor: '#83C5BE',
+	contrastColor: '#FFDDD2',
+	contrastDark: '#E29578',
+};
 
-// export const invertTheme = styled.css`
-// 	color: #edf6f9;
-// `;
+export const invertTheme = {
+	color: '#006d77',
+	Darkcolor: '#EDF6F9',
+	lightColor: '#83C5Be',
+	contrastDark: '#FFDDD2',
+	contrastColor: '#E29578',
+};
 
 export default GlobalStyle;
