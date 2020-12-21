@@ -23,7 +23,7 @@ const AboutMe = () => {
 		}, []); // Empty array ensures effect is only run on mount and unmount
 	};
 
-	// useLockBodyScroll();
+	useLockBodyScroll();
 
 	return (
 		<>

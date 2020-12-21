@@ -11,7 +11,6 @@ export const MobileNavMenu = styled.div`
 	opacity: 1;
 	transition: all 0.5s ease;
 	background: ${(props) => props.theme.Darkcolor};
-	z-index: 3;
 `;
 
 export const Nav = styled(motion.nav)`
