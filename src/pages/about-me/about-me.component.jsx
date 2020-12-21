@@ -40,7 +40,7 @@ const AboutMe = () => {
 
 	const isMobile = windowDimension <= 900;
 
-	useLockBodyScroll();
+	// useLockBodyScroll();
 
 	return (
 		<>
