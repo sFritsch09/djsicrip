@@ -12,10 +12,12 @@ export const Main = styled.main`
 			display: none;
 			@media screen and (max-width: 900px) {
 				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
 				text-decoration: none;
 				font-size: 50px;
-				width: 100%;
-				height: 100%;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -54,6 +56,10 @@ export const Main = styled.main`
 					margin-top: 20px;
 					text-transform: uppercase;
 					color: ${(props) => props.theme.color};
+
+					@media screen and (max-width: 900px) {
+						margin-top: 5px;
+					}
 				}
 			}
 		}
