@@ -22,6 +22,7 @@ export const Main = styled.main`
 				justify-content: center;
 				align-items: center;
 				color: ${(props) => props.theme.color};
+				margin-right: 20px;
 			}
 		}
 		.row {
@@ -78,7 +79,7 @@ export const Single = styled(motion.div)`
 			justify-content: center;
 			@media screen and (max-width: 600px) {
 				margin-top: 0;
-				height: 20vh;
+				height: 30vh;
 			}
 			.top {
 				padding: 40px;
@@ -105,10 +106,13 @@ export const Single = styled(motion.div)`
 						@media screen and (max-width: 1500px) {
 							font-size: 100px;
 						}
-						@media screen and (max-width: 600px) {
-							font-size: 80px;
+						@media screen and (max-width: 900px) {
+							font-size: 60px;
 						}
-						@media screen and (max-width: 400px) {
+						@media screen and (max-width: 600px) {
+							font-size: 50px;
+						}
+						@media screen and (max-width: 490px) {
 							font-size: 30px;
 						}
 					}
