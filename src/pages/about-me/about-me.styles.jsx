@@ -58,6 +58,9 @@ export const Single = styled(motion.div)`
 					overflow: hidden;
 					.first {
 						margin-right: 72px;
+						@media screen and (max-width: 600px) {
+							margin-right: 30px;
+						}
 					}
 					span {
 						display: inline-block;
@@ -71,6 +74,9 @@ export const Single = styled(motion.div)`
 						}
 						@media screen and (max-width: 600px) {
 							font-size: 80px;
+						}
+						@media screen and (max-width: 400px) {
+							font-size: 30px;
 						}
 					}
 				}

@@ -1,15 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { BsArrowBarLeft, BsArrowBarRight } from 'react-icons/bs';
-import {
-	SectionBg,
-	SectionOverlay,
-	SectionOverlayWrapper,
-	Container,
-	ImgOne,
-	ImgTwo,
-	ImgLogo,
-} from './slider.styles';
+import { SectionOverlay, SectionOverlayWrapper, Container, ImgOne, ImgLogo } from './slider.styles';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
