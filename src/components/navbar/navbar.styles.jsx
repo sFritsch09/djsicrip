@@ -32,11 +32,11 @@ export const NavbarContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	height: 80px;
-	max-width: 1300px;
+	max-width: 100%;
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: 30px;
-	padding-left: 30px;
+	padding-right: 60px;
+	padding-left: 60px;
 	@media screen and (max-width: 900px) {
 	}
 `;
@@ -181,7 +181,7 @@ export const NavLink = styled(Link)`
 	}
 `;
 
-export const NavTools = styled.div`
+export const NavTools = styled(Link)`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

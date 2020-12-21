@@ -20,6 +20,7 @@ export const theme = {
 	lightColor: '#83C5BE',
 	contrastColor: '#FFDDD2',
 	contrastDark: '#E29578',
+	darkColor: '#002f33',
 };
 
 export const invertTheme = {

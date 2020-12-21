@@ -23,10 +23,10 @@ const variants = {
 	},
 };
 
-export const MenuItem = ({ textItem, iconItem }) => {
+export const MenuItem = ({ textItem, iconItem, link, close }) => {
 	return (
 		<NavItem variants={variants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-			<TextWrapper>
+			<TextWrapper to={link} onClick={close}>
 				<IconWrapper>{iconItem}</IconWrapper>
 				<TextContainer>{textItem}</TextContainer>
 			</TextWrapper>

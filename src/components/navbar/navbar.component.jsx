@@ -66,32 +66,32 @@ const Navbar = () => {
 								</NavLink>
 							</NavItem>
 							<NavItem>
-								<NavLink className={scroll ? 'sticky' : ''} to="/">
+								<NavLink className={scroll ? 'sticky' : ''} to="/music">
 									MUSIC
 								</NavLink>
 							</NavItem>
 							<NavItem>
-								<NavLink className={scroll ? 'sticky' : ''} to="/">
+								<NavLink className={scroll ? 'sticky' : ''} to="/about">
 									ÜBER MICH
 								</NavLink>
 							</NavItem>
 							<NavItem>
-								<NavLink className={scroll ? 'sticky' : ''} to="/">
+								<NavLink className={scroll ? 'sticky' : ''} to="/equipment">
 									EQUIPMENT
 								</NavLink>
 							</NavItem>
 							<NavItem>
-								<NavLink className={scroll ? 'sticky' : ''} to="/">
+								<NavLink className={scroll ? 'sticky' : ''} to="/price">
 									PREISE
 								</NavLink>
 							</NavItem>
 							<NavItem>
-								<NavLink className={scroll ? 'sticky' : ''} to="/">
+								<NavLink className={scroll ? 'sticky' : ''} to="/booking">
 									ANFRAGE
 								</NavLink>
 							</NavItem>
 						</NavMenu>
-						<NavTools className={scroll ? 'sticky' : ''}>
+						<NavTools className={scroll ? 'sticky' : ''} to="login">
 							<BiUser />
 						</NavTools>
 					</NavbarContainer>

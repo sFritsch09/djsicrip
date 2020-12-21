@@ -12,12 +12,17 @@ const variants = {
 	},
 };
 
-export const Navigation = () => (
+export const Navigation = ({ clickClose }) => (
 	<NavMenu variants={variants}>
-		<MenuItem textItem="MUSIC" iconItem={<BiMusic />} />
-		<MenuItem textItem="ÜBER MICH" iconItem={<BiFace />} />
-		<MenuItem textItem="EQUIPMENT" iconItem={<BiBriefcaseAlt2 />} />
-		<MenuItem textItem="PREISE" iconItem={<BiEuro />} />
-		<MenuItem textItem="ANFRAGE" iconItem={<BiChat />} />
+		<MenuItem textItem="MUSIC" iconItem={<BiMusic />} link="/music" close={clickClose} />
+		<MenuItem textItem="ÜBER MICH" iconItem={<BiFace />} link="/about" close={clickClose} />
+		<MenuItem
+			textItem="EQUIPMENT"
+			iconItem={<BiBriefcaseAlt2 />}
+			link="/equipment"
+			close={clickClose}
+		/>
+		<MenuItem textItem="PREISE" iconItem={<BiEuro />} link="/price" close={clickClose} />
+		<MenuItem textItem="ANFRAGE" iconItem={<BiChat />} link="/booking" close={clickClose} />
 	</NavMenu>
 );

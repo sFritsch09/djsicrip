@@ -18,12 +18,12 @@ const MobileNavbar = () => {
 	return (
 		<Nav initial={false} animate={click ? 'open' : 'closed'}>
 			<NavbarContainer>
-				<LoginButton>LOG IN</LoginButton>
-				<HomeButton>
+				<LoginButton to="/login">LOG IN</LoginButton>
+				<HomeButton to="/">
 					<BiHome />
 				</HomeButton>
 				<MobileNavMenu click={click}>
-					<Navigation />
+					<Navigation clickClose={handleClick} />
 				</MobileNavMenu>
 				<MenuToggle click={handleClick} />
 			</NavbarContainer>
