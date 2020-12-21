@@ -17,12 +17,12 @@ export const Main = styled.main`
 				right: 0;
 				bottom: 0;
 				text-decoration: none;
-				font-size: 50px;
+				font-size: 40px;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				color: ${(props) => props.theme.color};
-				margin-right: 20px;
+				margin-right: 50px;
 			}
 		}
 		.row {
