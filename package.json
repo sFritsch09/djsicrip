@@ -2,7 +2,7 @@
 	"name": "djsicrip",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://sfritsch09.github.io/djsicrip/",
+	"homepage": "https://sfritsch09.github.io/djsicrip/djsicrip",
 	"dependencies": {
 		"@babel/core": "^7.12.10",
 		"@testing-library/jest-dom": "^5.11.4",

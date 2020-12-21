@@ -5,7 +5,7 @@ export const Scroll = styled(motion.div)`
 	position: absolute;
 	bottom: 100px;
 	left: 10vw;
-	z-index: 20;
+	z-index: 3;
 	.icon {
 		svg {
 			height: auto;
