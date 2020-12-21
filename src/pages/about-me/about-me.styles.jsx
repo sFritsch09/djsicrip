@@ -23,6 +23,9 @@ export const Main = styled.main`
 				align-items: center;
 				color: ${(props) => props.theme.color};
 				margin-right: 50px;
+				&:hover {
+					color: ${(props) => props.theme.contrastDark};
+				}
 			}
 		}
 		.row {

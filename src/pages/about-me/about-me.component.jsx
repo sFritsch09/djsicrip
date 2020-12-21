@@ -46,7 +46,7 @@ const AboutMe = () => {
 										<motion.img
 											src={src}
 											alt="Sebastian Fritsch"
-											whileHover={{ scale: 1.1 }}
+											whileHover={{ scale: 1.15 }}
 											transition={transition}
 										/>
 									</Link>
