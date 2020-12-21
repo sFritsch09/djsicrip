@@ -8,6 +8,20 @@ export const Main = styled.main`
 		@media screen and (max-width: 600px) {
 			padding-top: 60px;
 		}
+		.mobileText {
+			display: none;
+			@media screen and (max-width: 900px) {
+				position: absolute;
+				text-decoration: none;
+				font-size: 50px;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: ${(props) => props.theme.color};
+			}
+		}
 		.row {
 			max-height: 100%;
 			align-items: center;

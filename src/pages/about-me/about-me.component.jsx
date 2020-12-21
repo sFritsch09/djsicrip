@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useEffect, useState } from 'react';
+import React, { useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import src from '../../images/about.jpeg';
@@ -22,25 +22,8 @@ const AboutMe = () => {
 			return () => (document.body.style.overflow = originalStyle);
 		}, []); // Empty array ensures effect is only run on mount and unmount
 	};
-	// is Mobile
-	const [windowDimension, setWindowDimension] = useState(null);
 
-	useEffect(() => {
-		setWindowDimension(window.innerWidth);
-	}, []);
-
-	useEffect(() => {
-		function handleResize() {
-			setWindowDimension(window.innerWidth);
-		}
-
-		window.addEventListener('resize', handleResize);
-		return () => window.removeEventListener('resize', handleResize);
-	}, []);
-
-	const isMobile = windowDimension <= 900;
-
-	// useLockBodyScroll();
+	useLockBodyScroll();
 
 	return (
 		<>
@@ -57,6 +40,9 @@ const AboutMe = () => {
 							>
 								<div className="frame">
 									<Link to={`/about/sebastian`}>
+										<motion.div whileTap={{ scale: 1.1 }} className="mobileText">
+											TAP ME
+										</motion.div>
 										<motion.img
 											src={src}
 											alt="Sebastian Fritsch"
