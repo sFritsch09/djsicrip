@@ -33,7 +33,6 @@ const Navbar = () => {
 	}, []);
 
 	const isMobile = windowDimension <= 900;
-	console.log({ isMobile });
 	// is scrolling
 	const [scroll, setScroll] = useState(0);
 	const [click, setClick] = useState(false);

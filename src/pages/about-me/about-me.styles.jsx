@@ -5,6 +5,9 @@ export const Main = styled.main`
 	.container {
 		position: relative;
 		padding-top: 150px;
+		@media screen and (max-width: 600px) {
+			padding-top: 60px;
+		}
 		.row {
 			max-height: 100%;
 			align-items: center;
@@ -17,8 +20,14 @@ export const Main = styled.main`
 					overflow: hidden;
 					position: relative;
 					.frame {
+						display: flex;
+						justify-content: center;
+
 						img {
 							width: 100%;
+							@media screen and (max-width: 600px) {
+								width: 80vw;
+							}
 						}
 					}
 				}
@@ -47,6 +56,10 @@ export const Single = styled(motion.div)`
 			align-items: flex-end;
 			display: flex;
 			justify-content: center;
+			@media screen and (max-width: 600px) {
+				margin-top: 0;
+				height: 20vh;
+			}
 			.top {
 				padding: 40px;
 				width: 100%;

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useLayoutEffect, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import src from '../../images/about.jpeg';
@@ -9,19 +9,39 @@ const imageDetails = {
 	width: 524,
 	height: 650,
 };
-// Hook
-function useLockBodyScroll() {
-	useLayoutEffect(() => {
-		// Get original body overflow
-		const originalStyle = window.getComputedStyle(document.body).overflow;
-		// Prevent scrolling on mount
-		document.body.style.overflow = 'hidden';
-		// Re-enable scrolling when component unmounts
-		return () => (document.body.style.overflow = originalStyle);
-	}, []); // Empty array ensures effect is only run on mount and unmount
-}
+
 const AboutMe = () => {
+	// Hook
+	const useLockBodyScroll = () => {
+		useLayoutEffect(() => {
+			// Get original body overflow
+			const originalStyle = window.getComputedStyle(document.body).overflow;
+			// Prevent scrolling on mount
+			document.body.style.overflow = 'hidden';
+			// Re-enable scrolling when component unmounts
+			return () => (document.body.style.overflow = originalStyle);
+		}, []); // Empty array ensures effect is only run on mount and unmount
+	};
+	// is Mobile
+	const [windowDimension, setWindowDimension] = useState(null);
+
+	useEffect(() => {
+		setWindowDimension(window.innerWidth);
+	}, []);
+
+	useEffect(() => {
+		function handleResize() {
+			setWindowDimension(window.innerWidth);
+		}
+
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
+
+	const isMobile = windowDimension <= 900;
+
 	useLockBodyScroll();
+
 	return (
 		<>
 			<Main>
