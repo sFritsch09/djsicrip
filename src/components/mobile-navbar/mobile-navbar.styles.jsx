@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export const MobileNavMenu = styled.div`
 	width: 100%;
-	height: 100vh;
+	height: ${(props) => props.height}%;
 	position: absolute;
 	bottom: 0;
 	left: ${({ click }) => (click ? 0 : '-100%')};
