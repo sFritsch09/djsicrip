@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import { Single, Empty } from './about-me.styles';
-import src from '../../images/about.jpeg';
+import src from '../../images/profile-green.jpg';
 
 //Components
 import ScrollForMore from '../../components/scroll-for-more/scroll-for-more.component';
@@ -133,9 +133,9 @@ const Fritsch = () => {
 												transition: { delay: 0.2, ...transition },
 												y:
 													window.innerWidth > 1440
-														? -400
+														? -300
 														: -600 && window.innerWidth < 1440
-														? -100
+														? -50
 														: -600,
 											}}
 										/>
