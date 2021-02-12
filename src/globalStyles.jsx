@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle`
 
 body{
 	background: ${(props) => props.theme.Darkcolor};
+	
+}
+.no-scroll {
+	overflow: hidden;
 }
 `;
 

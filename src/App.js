@@ -11,7 +11,7 @@ import Equipment from './pages/equipment/equipment.component';
 import Music from './pages/music/music.component';
 import Price from './pages/price/price.component';
 import LogIn from './pages/login/login.component';
-import { AnimatePresence } from 'framer-motion';
+// import { AnimatePresence } from 'framer-motion';
 
 function App() {
 	return (
@@ -19,21 +19,25 @@ function App() {
 			<ThemeProvider theme={theme}>
 				<GlobalStyle />
 				<Navbar />
-				<AnimatePresence
+				{
+					// <AnimatePresence
 					// initial={false}
-					exitBeforeEnter
-				>
-					<Switch>
-						<Route exact path="/" component={HomePage} />
-						<Route exact path="/about" component={AboutMe} />
-						<Route exact path="/about/sebastian" component={Fritsch} />
-						<Route path="/booking" component={Booking} />
-						<Route path="/equipment" component={Equipment} />
-						<Route path="/price" component={Price} />
-						<Route path="/music" component={Music} />
-						<Route path="/login" component={LogIn} />
-					</Switch>
-				</AnimatePresence>
+					// exitBeforeEnter
+					// >
+				}
+				<Switch>
+					<Route exact path="/" component={HomePage} />
+					<Route exact path="/about" component={AboutMe} />
+					<Route exact path="/about/sebastian" component={Fritsch} />
+					<Route path="/booking" component={Booking} />
+					<Route path="/equipment" component={Equipment} />
+					<Route path="/price" component={Price} />
+					<Route path="/music" component={Music} />
+					<Route path="/login" component={LogIn} />
+				</Switch>
+				{
+					// </AnimatePresence>
+				}
 			</ThemeProvider>
 		</div>
 	);
