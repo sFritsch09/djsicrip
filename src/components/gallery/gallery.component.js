@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Product, ProductImage } from './gallery.styles.js';
+import { useScrollUpdate } from '../hooks/ScrollContext';
 //icons
 import { BiChevronLeft as Chevron } from 'react-icons/bi';
 import { VscClose as Close } from 'react-icons/vsc';
@@ -8,6 +9,8 @@ import { IoArrowDownCircleOutline as DownArrow } from 'react-icons/io5';
 import { motion, useSpring, useTransform, AnimatePresence } from 'framer-motion';
 
 const Gallery = ({ header, desc, image, title }) => {
+	const scrollContext = useScrollUpdate();
+
 	const ease = [0.6, 0.05, 0.2, 0.99];
 	const x = useSpring(0, {
 		stiffness: 1500,
@@ -21,21 +24,16 @@ const Gallery = ({ header, desc, image, title }) => {
 	const down = useTransform(x, [-100, 0], [100, 0]);
 	//state
 	const [state, setState] = useState(false);
-
 	//scrolltargets
-	let targetElement = document.querySelector('html');
+	// let targetElement = document.querySelector('html');
 
 	// Update the state to check if the user has dragged the product
 	useEffect(() => {
 		x.onChange(() => {
 			x.get() > -100 ? setState(false) : setState(true);
+			x.get() < -100 ? scrollContext(true) : scrollContext(false);
 		});
-	}, [x]);
-
-	//Setting body scroll
-	useEffect(() => {
-		state ? targetElement.classList.add('no-scroll') : targetElement.classList.remove('no-scroll');
-	});
+	}, [x, scrollContext]);
 
 	// Closing the drag product
 	const closeProductDrag = () => {

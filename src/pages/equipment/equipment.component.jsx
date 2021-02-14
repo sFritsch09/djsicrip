@@ -1,9 +1,10 @@
 import React, { createRef, useEffect } from 'react';
 import ScrollSnap from 'scroll-snap';
 import { useNav, useNavUpdate } from '../../components/hooks/NavContext';
+import { useScroll } from '../../components/hooks/ScrollContext';
 
 import Gallery from '../../components/gallery/gallery.component';
-import { Container, Section, Spacer, Section2, Section3 } from './equipment.styles';
+import { Container, Section, Section2, Section3 } from './equipment.styles';
 
 import Controller1 from '../../images/equipment/KontrollS2Front.png';
 import Soundboks from '../../images/equipment/SoundBoks.png';
@@ -14,6 +15,7 @@ import Turntable from '../../images/equipment/Turntable.png';
 const Equipment = () => {
 	const scrollContext = useNav();
 	const scrollToggleContext = useNavUpdate();
+	const hideScroll = useScroll();
 
 	const ref = createRef();
 	function callback() {}
@@ -30,6 +32,7 @@ const Equipment = () => {
 		bindScrollSnap();
 		targetElement.classList.remove('no-scroll');
 	});
+	// console.log(hideScroll);
 	useEffect(() => {
 		if (!scrollContext) {
 			scrollToggleContext();
@@ -40,10 +43,9 @@ const Equipment = () => {
 			}
 		};
 	}, [scrollContext, scrollToggleContext]);
-
 	return (
 		<React.Fragment>
-			<Container ref={ref}>
+			<Container ref={ref} scroll={!hideScroll}>
 				<Section>
 					<Gallery
 						header="DJ Controller"

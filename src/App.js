@@ -12,6 +12,7 @@ import Equipment from './pages/equipment/equipment.component';
 import Music from './pages/music/music.component';
 import Price from './pages/price/price.component';
 import LogIn from './pages/login/login.component';
+import { ScrollProvider } from './components/hooks/ScrollContext';
 // import { AnimatePresence } from 'framer-motion';
 
 function App() {
@@ -32,7 +33,9 @@ function App() {
 						<Route exact path="/about" component={AboutMe} />
 						<Route exact path="/about/sebastian" component={Fritsch} />
 						<Route path="/booking" component={Booking} />
-						<Route path="/equipment" component={Equipment} />
+						<ScrollProvider>
+							<Route path="/equipment" component={Equipment} />
+						</ScrollProvider>
 						<Route path="/price" component={Price} />
 						<Route path="/music" component={Music} />
 						<Route path="/login" component={LogIn} />
