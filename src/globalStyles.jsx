@@ -14,8 +14,10 @@ body{
 	
 }
 .no-scroll {
-	overflow: hidden;
+	overflow-y: hidden;
 }
+
+
 `;
 
 export const theme = {

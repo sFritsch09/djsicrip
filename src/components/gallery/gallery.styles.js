@@ -4,10 +4,19 @@ export const Product = styled.div`
 	overflow-x: hidden;
 	.product-inner {
 		padding: 0 32px;
+		@media screen and (max-width: 800px) {
+			padding: 20px 32px;
+		}
 		.product-content {
-			padding: 72px 0 24px;
+			padding: 120px 0 24px;
+
+			@media screen and (max-width: 800px) {
+				padding: 40px 0 24px;
+			}
+
 			.product-content-inner {
 				color: ${(props) => props.theme.lightColor};
+				/* padding-bottom: 50px; */
 				h4 {
 					font-size: 14px;
 					margin: 0 0 16px 0;
@@ -53,7 +62,7 @@ export const Product = styled.div`
 			height: 100vh;
 			width: 100%;
 			background: #636363;
-			top: 80px;
+			top: 0px;
 			left: 0;
 			bottom: 0;
 			z-index: 1;
@@ -103,7 +112,7 @@ export const Product = styled.div`
 		.product-container {
 			position: relative;
 			height: 400px;
-			left: 400px;
+			left: 300px;
 			display: flex;
 			align-items: center;
 			margin-bottom: 40px;
@@ -166,7 +175,9 @@ export const Product = styled.div`
 
 export const ProductImage = styled.div`
 	background-image: url(${(props) => props.image});
-	width: 800px;
-	height: 500px;
-	background-size: cover;
+	width: 1000px;
+	height: 600px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 `;
