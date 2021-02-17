@@ -11,7 +11,7 @@ export const Product = styled.div`
 			padding: 120px 0 24px;
 
 			@media screen and (max-width: 800px) {
-				padding: 40px 0 24px;
+				padding: 20px 0 24px;
 			}
 
 			.product-content-inner {
@@ -21,12 +21,18 @@ export const Product = styled.div`
 					font-size: 14px;
 					margin: 0 0 16px 0;
 					line-height: 1;
+					@media screen and (max-width: 800px) {
+						font-size: 10px;
+					}
 				}
 				h1 {
 					font-size: 50px;
 					font-weight: 700;
 					margin: 0 0 24px 0;
 					line-height: 1;
+					@media screen and (max-width: 800px) {
+						font-size: 35px;
+					}
 				}
 				p {
 					font-size: 14px;
@@ -56,7 +62,9 @@ export const Product = styled.div`
 	}
 	.product-slide-enlarge {
 		position: relative;
-
+		@media screen and (max-width: 900px) {
+			padding-top: 15px;
+		}
 		.background {
 			position: fixed;
 			height: 100vh;
@@ -118,7 +126,9 @@ export const Product = styled.div`
 			margin-bottom: 40px;
 
 			@media screen and (max-width: 900px) {
-				left: -50px;
+				left: -60px;
+				height: 250px;
+				margin-bottom: 0px;
 			}
 
 			.product-image {
@@ -180,4 +190,9 @@ export const ProductImage = styled.div`
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+
+	@media screen and (max-width: 800px) {
+		height: 400px;
+		width: 800px;
+	}
 `;

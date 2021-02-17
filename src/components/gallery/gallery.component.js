@@ -11,15 +11,15 @@ import { motion, useSpring, useTransform, AnimatePresence } from 'framer-motion'
 const Gallery = ({ header, desc, image, title }) => {
 	const scrollContext = useScrollUpdate();
 
-	const ease = [0.6, 0.05, 0.2, 0.99];
+	const ease = [0.8, 0.05, -0.2, 0.99];
 	const x = useSpring(0, {
-		stiffness: 1500,
-		damping: 400,
+		stiffness: 900,
+		damping: 200,
 	});
 	const fadeIn = useTransform(x, [-100, 0], [1, 0]);
 	const fadeOut = useTransform(x, [-60, 0], [0, 1]);
 	const scale = useTransform(x, [-100, 0], [1.5, 1]);
-	const width = useTransform(x, [-900, 0], [350, 0]);
+	const width = useTransform(x, [-950, 0], [350, 0]);
 	const up = useTransform(x, [-100, 0], [-100, 0]);
 	const down = useTransform(x, [-100, 0], [100, 0]);
 	//state
@@ -79,8 +79,9 @@ const Gallery = ({ header, desc, image, title }) => {
 					<motion.div
 						drag="x"
 						style={{ x, scale, cursor: 'grab' }}
+						dragTransition={{ ease: ease, restDelta: 0.2, power: 2 }}
 						animate={{ y: -45 }}
-						dragElastic={0.1}
+						dragElastic={0.05}
 						className="product-image"
 						dragConstraints={{ left: -300, right: 0 }}
 						whileTap={{ cursor: 'grabbing' }}
