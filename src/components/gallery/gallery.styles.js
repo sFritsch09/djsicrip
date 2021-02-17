@@ -6,12 +6,13 @@ export const Product = styled.div`
 		padding: 0 32px;
 		@media screen and (max-width: 800px) {
 			padding: 0 20px;
+			padding-bottom: 20px;
 		}
 		.product-content {
 			padding: 120px 0 24px;
 
 			@media screen and (max-width: 800px) {
-				padding: 15px 0 24px;
+				padding: 10px 0 24px;
 			}
 
 			.product-content-inner {
@@ -42,6 +43,10 @@ export const Product = styled.div`
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
+					@media screen and (max-width: 800px) {
+						margin-bottom: 40px;
+					}
+
 					button {
 						height: 56px;
 						padding: 0 24px;
@@ -50,6 +55,9 @@ export const Product = styled.div`
 						border: none;
 						font-size: 14px;
 						line-height: 1;
+						@media screen and (max-width: 800px) {
+							height: 30px;
+						}
 					}
 					svg {
 						color: ${(props) => props.theme.color};
@@ -63,7 +71,7 @@ export const Product = styled.div`
 	.product-slide-enlarge {
 		position: relative;
 		@media screen and (max-width: 900px) {
-			padding-top: 30px;
+			padding-top: 20px;
 		}
 		.background {
 			position: fixed;
@@ -127,8 +135,8 @@ export const Product = styled.div`
 
 			@media screen and (max-width: 900px) {
 				left: -60px;
-				height: 200px;
-				margin-bottom: 10px;
+				height: 160px;
+				margin-bottom: 0px;
 			}
 
 			.product-image {
@@ -144,7 +152,7 @@ export const Product = styled.div`
 			.product-drag-inner {
 				padding: 0 32px;
 				@media screen and (max-width: 900px) {
-					margin-bottom: 80px;
+					margin-bottom: 100px;
 				}
 				.product-drag-label {
 					display: flex;

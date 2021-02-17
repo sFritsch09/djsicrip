@@ -27,7 +27,7 @@ export const Section2 = styled.div`
 		padding-top: 120px;
 	}
 	@media screen and (max-width: 800px) {
-		padding-top: 20px;
+		padding-top: 0px;
 	}
 `;
 export const Section3 = styled.div`
@@ -39,7 +39,7 @@ export const Section3 = styled.div`
 		padding-top: 80px;
 	}
 	@media screen and (max-width: 800px) {
-		padding-top: 40px;
+		padding-top: 0px;
 	}
 `;
 export const Spacer = styled.div`
