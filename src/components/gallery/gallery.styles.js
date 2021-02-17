@@ -5,13 +5,13 @@ export const Product = styled.div`
 	.product-inner {
 		padding: 0 32px;
 		@media screen and (max-width: 800px) {
-			padding: 5px 20px;
+			padding: 0 20px;
 		}
 		.product-content {
 			padding: 120px 0 24px;
 
 			@media screen and (max-width: 800px) {
-				padding: 20px 0 24px;
+				padding: 15px 0 24px;
 			}
 
 			.product-content-inner {
@@ -127,7 +127,7 @@ export const Product = styled.div`
 
 			@media screen and (max-width: 900px) {
 				left: -60px;
-				height: 240px;
+				height: 200px;
 				margin-bottom: 10px;
 			}
 
@@ -192,7 +192,7 @@ export const ProductImage = styled.div`
 	background-position: center;
 
 	@media screen and (max-width: 800px) {
-		height: 400px;
+		height: 350px;
 		width: 800px;
 	}
 `;
