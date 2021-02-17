@@ -5,7 +5,7 @@ export const Product = styled.div`
 	.product-inner {
 		padding: 0 32px;
 		@media screen and (max-width: 800px) {
-			padding: 20px 20px;
+			padding: 5px 20px;
 		}
 		.product-content {
 			padding: 120px 0 24px;
@@ -63,7 +63,7 @@ export const Product = styled.div`
 	.product-slide-enlarge {
 		position: relative;
 		@media screen and (max-width: 900px) {
-			padding-top: 15px;
+			padding-top: 30px;
 		}
 		.background {
 			position: fixed;
@@ -128,7 +128,7 @@ export const Product = styled.div`
 			@media screen and (max-width: 900px) {
 				left: -60px;
 				height: 240px;
-				margin-bottom: 0px;
+				margin-bottom: 10px;
 			}
 
 			.product-image {
