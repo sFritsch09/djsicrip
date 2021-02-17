@@ -19,6 +19,7 @@ export const Main = styled.main`
 				text-decoration: none;
 				font-size: 40px;
 				display: flex;
+				text-shadow: black 1px 0 10px;
 				justify-content: center;
 				align-items: center;
 				color: ${(props) => props.theme.color};
