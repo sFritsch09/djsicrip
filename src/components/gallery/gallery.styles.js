@@ -3,13 +3,13 @@ import styled from 'styled-components';
 export const Product = styled.div`
 	overflow-x: hidden;
 	.product-inner {
-		padding: 0 32px;
+		padding: 0px 32px;
 		@media screen and (max-width: 800px) {
 			padding: 0 20px;
 			padding-bottom: 20px;
 		}
 		.product-content {
-			padding: 120px 0 24px;
+			padding: 160px 0 24px;
 
 			@media screen and (max-width: 800px) {
 				padding: 10px 0 24px;
@@ -63,6 +63,8 @@ export const Product = styled.div`
 						color: ${(props) => props.theme.color};
 						margin-right: 24px;
 						font-size: 40px;
+						z-index: 2;
+						cursor: pointer;
 					}
 				}
 			}

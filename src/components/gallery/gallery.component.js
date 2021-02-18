@@ -8,7 +8,7 @@ import { IoArrowDownCircleOutline as DownArrow } from 'react-icons/io5';
 
 import { motion, useSpring, useTransform, AnimatePresence } from 'framer-motion';
 
-const Gallery = ({ header, desc, image, title }) => {
+const Gallery = ({ header, desc, image, title, arrowClick }) => {
 	const scrollContext = useScrollUpdate();
 
 	const ease = [0.8, 0.05, -0.2, 0.99];
@@ -50,7 +50,7 @@ const Gallery = ({ header, desc, image, title }) => {
 						<p>{desc}</p>
 						<div className="btn-row">
 							<button>Mieten</button>
-							<DownArrow />
+							<DownArrow onClick={arrowClick} />
 						</div>
 					</motion.div>
 				</div>
