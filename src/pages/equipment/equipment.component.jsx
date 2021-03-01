@@ -38,7 +38,7 @@ const Equipment = () => {
 	const scrollToggleContext = useNavUpdate();
 	const hideScroll = useScroll();
 
-	const ref = createRef();
+	const ref = useRef();
 	function callback() {}
 	const bindScrollSnap = () => {
 		const element = ref.current;
