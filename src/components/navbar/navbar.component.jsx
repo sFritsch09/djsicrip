@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BiUser } from 'react-icons/bi';
 import { FaTimes, FaBars } from 'react-icons/fa';
+import DarkModeToggle from 'react-dark-mode-toggle';
+import { useDarkMode, useDarkModeUpdate } from '../hooks/DarkModeContext';
 import {
 	LogoContainer,
 	Nav,
@@ -12,6 +14,7 @@ import {
 	NavTools,
 	NavbarContainer,
 	MobileIcon,
+	NavDarkMode,
 } from './navbar.styles';
 import MobileNavbar from '../mobile-navbar/mobile-navbar.component';
 import { useNav } from '../hooks/NavContext';
@@ -19,6 +22,8 @@ import { useNav } from '../hooks/NavContext';
 const Navbar = () => {
 	// is Mobile
 	const [windowDimension, setWindowDimension] = useState(null);
+	const isDarkMode = useDarkMode();
+	const setIsDarkMode = useDarkModeUpdate();
 
 	useEffect(() => {
 		setWindowDimension(window.innerWidth);
@@ -97,6 +102,9 @@ const Navbar = () => {
 						<NavTools className={scroll ? 'sticky' : ''} to="login">
 							<BiUser />
 						</NavTools>
+						<NavDarkMode>
+							<DarkModeToggle onChange={setIsDarkMode} checked={isDarkMode} size={40} />
+						</NavDarkMode>
 					</NavbarContainer>
 				</Nav>
 			) : (

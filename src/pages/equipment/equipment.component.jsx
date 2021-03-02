@@ -1,4 +1,4 @@
-import React, { createRef, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import ScrollSnap from 'scroll-snap';
 import { useNav, useNavUpdate } from '../../components/hooks/NavContext';
 import { useScroll } from '../../components/hooks/ScrollContext';

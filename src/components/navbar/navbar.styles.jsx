@@ -196,3 +196,18 @@ export const NavTools = styled(Link)`
 		color: ${(props) => props.theme.Darkcolor};
 	}
 `;
+
+export const NavDarkMode = styled.div`
+	padding-left: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	*:focus {
+		outline: none;
+	}
+
+	@media screen and (max-width: 900px) {
+		display: none;
+	}
+`;

@@ -21,6 +21,7 @@ body{
 `;
 
 export const theme = {
+	mode: 'Dark',
 	Darkcolor: '#006d77',
 	color: '#EDF6F9',
 	lightColor: '#83C5BE',

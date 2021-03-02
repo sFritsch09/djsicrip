@@ -14,6 +14,9 @@ export const Product = styled.div`
 			@media screen and (max-width: 800px) {
 				padding: 10px 0 24px;
 			}
+			@media screen and (min-width: 1800px) {
+				padding: 120px 0 24px;
+			}
 
 			.product-content-inner {
 				color: ${(props) => props.theme.lightColor};
@@ -105,7 +108,8 @@ export const Product = styled.div`
 				top: 0px;
 			}
 			.company-name {
-				color: ${(props) => props.theme.color};
+				color: ${(props) =>
+					props.theme.mode === 'Dark' ? props.theme.color : props.theme.Darkcolor};
 				font-size: 3rem;
 				font-weight: 700;
 
@@ -114,7 +118,8 @@ export const Product = styled.div`
 				}
 			}
 			.close {
-				color: ${(props) => props.theme.color};
+				color: ${(props) =>
+					props.theme.mode === 'Dark' ? props.theme.color : props.theme.Darkcolor};
 				font-size: 2.5rem;
 				font-weight: 700;
 				display: flex;
@@ -182,7 +187,8 @@ export const Product = styled.div`
 					.product-drag-progress {
 						width: 0%;
 						height: 1px;
-						background: ${(props) => props.theme.color};
+						background: ${(props) =>
+							props.theme.mode === 'Dark' ? props.theme.color : props.theme.Darkcolor};
 						position: absolute;
 						z-index: 2;
 						right: 0;

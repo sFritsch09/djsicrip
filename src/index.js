@@ -4,11 +4,14 @@ import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { DarkModeProvider } from './components/hooks/DarkModeContext';
 
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<App />
+			<DarkModeProvider>
+				<App />
+			</DarkModeProvider>
 		</BrowserRouter>
 	</React.StrictMode>,
 	document.getElementById('root')

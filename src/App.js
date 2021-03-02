@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import GlobalStyle, { theme, invertTheme } from './globalStyles';
 import { Route, Switch } from 'react-router-dom';
 import { Navbar } from './components';
 import { ThemeProvider } from 'styled-components';
 import { NavProvider } from './components/hooks/NavContext';
+import { useDarkMode } from './components/hooks/DarkModeContext';
 import HomePage from './pages/homepage/hompage.component';
 import AboutMe from './pages/about-me/about-me.component';
 import Fritsch from './pages/about-me/about-fritsch.component';
@@ -16,9 +17,13 @@ import { ScrollProvider } from './components/hooks/ScrollContext';
 // import { AnimatePresence } from 'framer-motion';
 
 function App() {
+	const isDarkMode = useDarkMode();
+	useEffect(() => {
+		localStorage.setItem('theme', isDarkMode);
+	}, [isDarkMode]);
 	return (
 		<div>
-			<ThemeProvider theme={theme}>
+			<ThemeProvider theme={isDarkMode ? theme : invertTheme}>
 				<NavProvider>
 					<GlobalStyle />
 					<Navbar />

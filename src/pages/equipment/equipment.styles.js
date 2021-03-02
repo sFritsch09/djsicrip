@@ -24,7 +24,7 @@ export const Section2 = styled.div`
 		padding-top: 80px;
 	}
 	@media screen and (max-width: 1600px) {
-		padding-top: 120px;
+		padding-top: 0px;
 	}
 	@media screen and (max-width: 800px) {
 		padding-top: 0px;
@@ -36,7 +36,7 @@ export const Section3 = styled.div`
 	width: 100%;
 
 	@media screen and (min-width: 1800px) {
-		padding-top: 80px;
+		padding-top: 1px;
 	}
 	@media screen and (max-width: 800px) {
 		padding-top: 0px;
