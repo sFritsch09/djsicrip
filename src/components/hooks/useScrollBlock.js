@@ -29,9 +29,6 @@ const useScrollBlock = () => {
 		body.style.position = 'relative'; /* [1] */
 		body.style.overflow = 'hidden'; /* [2] */
 		body.style.paddingRight = `${bodyPaddingRight + scrollBarWidth}px`;
-		// body.bind('touchmove', function (e) {
-		// 	e.preventDefault();
-		// });
 		document.body.addEventListener(
 			'touchmove',
 			function (event) {
@@ -52,7 +49,8 @@ const useScrollBlock = () => {
 		body.style.position = '';
 		body.style.overflow = '';
 		body.style.paddingRight = '';
-		// body.unbind('touchmove');
+
+		window.removeEventListener('touchmove', preventDefault);
 
 		scrollBlocked.current = false;
 	};
