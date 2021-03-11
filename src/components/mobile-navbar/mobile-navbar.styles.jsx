@@ -105,7 +105,7 @@ export const NavMenu = styled(motion.ul)`
 
 export const NavItem = styled(motion.li)`
 	list-style: none;
-	height: 60px;
+	height: 50px;
 	width: 100%;
 	cursor: pointer;
 	margin-bottom: 10px;
