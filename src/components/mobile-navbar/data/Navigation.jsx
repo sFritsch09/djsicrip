@@ -31,6 +31,6 @@ export const Navigation = ({ clickClose, setIsDarkMode, isDarkMode }) => (
 			close={setIsDarkMode}
 			iconItem={<DarkModeToggle onChange={setIsDarkMode} checked={isDarkMode} size={40} />}
 		/>
-		<Spacer />
+		<MenuItem link="#" />
 	</NavMenu>
 );
