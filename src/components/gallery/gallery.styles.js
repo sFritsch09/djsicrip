@@ -45,8 +45,10 @@ export const Product = styled.div`
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
+					z-index: 4;
 					@media screen and (max-width: 800px) {
-						margin-bottom: 40px;
+						margin-bottom: 70px;
+						z-index: 4;
 					}
 
 					button {

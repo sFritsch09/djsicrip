@@ -1,5 +1,6 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import { useScroll } from '../../components/hooks/ScrollContext';
+import useScrollBlock from '../../components/hooks/useScrollBlock';
 
 import Gallery from '../../components/gallery/gallery.component';
 import { Container, Section, Section2, Section3, Spacer } from './equipment.styles';
@@ -33,15 +34,18 @@ const Equipment = () => {
 		titleRef5.current.scrollIntoView({ behavior: 'smooth' });
 	};
 	const hideScroll = useScroll();
+	const [blockScroll, allowScroll] = useScrollBlock();
 	//scrolltargets
-	const targetElement = document.querySelector('html');
+	// const targetElement = document.querySelector('html');
 	useLayoutEffect(() => {
 		if (hideScroll) {
-			targetElement.classList.add('no-scroll');
+			// targetElement.classList.add('no-scroll');
+			blockScroll();
 		} else {
-			targetElement.classList.remove('no-scroll');
+			// targetElement.classList.remove('no-scroll');
+			allowScroll();
 		}
-	}, [hideScroll, targetElement.classList]); // Empty array ensures effect is only run on mount and unmount
+	}, [hideScroll, allowScroll, blockScroll]); // Empty array ensures effect is only run on mount and unmount
 
 	return (
 		<React.Fragment>

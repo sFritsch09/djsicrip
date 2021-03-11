@@ -63,7 +63,7 @@ export const Main = styled.main`
 					color: ${(props) => props.theme.color};
 
 					@media screen and (max-width: 900px) {
-						margin-top: 5px;
+						margin-top: 1px;
 					}
 				}
 			}
