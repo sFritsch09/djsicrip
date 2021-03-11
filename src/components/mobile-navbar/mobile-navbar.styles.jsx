@@ -19,7 +19,7 @@ export const Nav = styled(motion.nav)`
 	top: initial;
 	position: fixed;
 	width: 100%;
-	height: 80px;
+	height: 90px;
 	opacity: 1;
 	background: ${(props) => props.theme.Darkcolor};
 	z-index: 3;
@@ -34,7 +34,7 @@ export const NavbarContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	height: 80px;
+	height: 90px;
 	max-width: 1300px;
 	margin-right: auto;
 	margin-left: auto;
