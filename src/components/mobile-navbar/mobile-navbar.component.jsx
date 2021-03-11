@@ -10,6 +10,8 @@ import {
 	LoginButton,
 } from './mobile-navbar.styles';
 
+import { useDarkMode, useDarkModeUpdate } from '../hooks/DarkModeContext';
+
 const MobileNavbar = () => {
 	const [click, setClick] = useState(false);
 
@@ -46,7 +48,8 @@ const MobileNavbar = () => {
 		return windowSize;
 	};
 	const size = useWindowSize();
-
+	const isDarkMode = useDarkMode();
+	const setIsDarkMode = useDarkModeUpdate();
 	return (
 		<Nav initial={false} animate={click ? 'open' : 'closed'}>
 			<NavbarContainer>
@@ -55,7 +58,11 @@ const MobileNavbar = () => {
 					<BiHome />
 				</HomeButton>
 				<MobileNavMenu click={click} height={size.height}>
-					<Navigation clickClose={handleClick} />
+					<Navigation
+						clickClose={handleClick}
+						isDarkMode={isDarkMode}
+						setIsDarkMode={setIsDarkMode}
+					/>
 				</MobileNavMenu>
 				<MenuToggle click={handleClick} />
 			</NavbarContainer>

@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuItem } from './MenuItem';
 import { NavMenu } from '../mobile-navbar.styles';
 import { BiMusic, BiFace, BiBriefcaseAlt2, BiEuro, BiChat } from 'react-icons/bi';
+import DarkModeToggle from 'react-dark-mode-toggle';
 
 const variants = {
 	open: {
@@ -12,7 +13,7 @@ const variants = {
 	},
 };
 
-export const Navigation = ({ clickClose }) => (
+export const Navigation = ({ clickClose, setIsDarkMode, isDarkMode }) => (
 	<NavMenu variants={variants}>
 		<MenuItem textItem="MUSIC" iconItem={<BiMusic />} link="/music" close={clickClose} />
 		<MenuItem textItem="ÜBER MICH" iconItem={<BiFace />} link="/about" close={clickClose} />
@@ -24,5 +25,11 @@ export const Navigation = ({ clickClose }) => (
 		/>
 		<MenuItem textItem="PREISE" iconItem={<BiEuro />} link="/price" close={clickClose} />
 		<MenuItem textItem="ANFRAGE" iconItem={<BiChat />} link="/booking" close={clickClose} />
+		<MenuItem
+			textItem="Theme"
+			link="#"
+			close={setIsDarkMode}
+			iconItem={<DarkModeToggle onChange={setIsDarkMode} checked={isDarkMode} size={40} />}
+		/>
 	</NavMenu>
 );
