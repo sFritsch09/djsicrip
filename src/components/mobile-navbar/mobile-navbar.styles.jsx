@@ -19,7 +19,7 @@ export const Nav = styled(motion.nav)`
 	top: initial;
 	position: fixed;
 	width: 100%;
-	height: 90px;
+	height: 80px;
 	opacity: 1;
 	background: ${(props) => props.theme.Darkcolor};
 	z-index: 3;
@@ -34,7 +34,7 @@ export const NavbarContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	height: 90px;
+	height: 80px;
 	max-width: 1300px;
 	margin-right: auto;
 	margin-left: auto;
@@ -135,4 +135,10 @@ export const IconWrapper = styled.div`
 export const TextContainer = styled.div`
 	font-size: 28px;
 	color: ${(props) => props.theme.contrastColor};
+`;
+
+export const Spacer = styled.li`
+	list-style: none;
+	height: 60px;
+	width: 100%;
 `;
