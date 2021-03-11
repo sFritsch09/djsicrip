@@ -13,11 +13,11 @@ body{
 	background: ${(props) => props.theme.Darkcolor};
 	
 }
+
+
 .no-scroll {
 	overflow-y: hidden;
 }
-
-
 `;
 
 export const theme = {

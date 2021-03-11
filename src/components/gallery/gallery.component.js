@@ -6,16 +6,13 @@ import { BiChevronLeft as Chevron } from 'react-icons/bi';
 import { VscClose as Close } from 'react-icons/vsc';
 import { IoArrowDownCircleOutline as DownArrow } from 'react-icons/io5';
 
-import { motion, useSpring, useTransform, AnimatePresence } from 'framer-motion';
+import { motion, useMotionValue, useTransform, AnimatePresence } from 'framer-motion';
 
-const Gallery = ({ header, desc, image, title, arrowClick }) => {
+const Gallery = ({ header, desc, image, title, arrowClick, imageClick }) => {
 	const scrollContext = useScrollUpdate();
 
-	const ease = [0.8, 0.05, -0.2, 0.99];
-	const x = useSpring(0, {
-		stiffness: 900,
-		damping: 200,
-	});
+	const ease = [0.6, 0.05, -0.01, 0.99];
+	let x = useMotionValue(0, { stiffness: 300, damping: 200, ease: ease });
 	const fadeIn = useTransform(x, [-100, 0], [1, 0]);
 	const fadeOut = useTransform(x, [-60, 0], [0, 1]);
 	const scale = useTransform(x, [-100, 0], [1.5, 1]);
@@ -24,8 +21,6 @@ const Gallery = ({ header, desc, image, title, arrowClick }) => {
 	const down = useTransform(x, [-100, 0], [100, 0]);
 	//state
 	const [state, setState] = useState(false);
-	//scrolltargets
-	// let targetElement = document.querySelector('html');
 
 	// Update the state to check if the user has dragged the product
 	useEffect(() => {
@@ -79,14 +74,13 @@ const Gallery = ({ header, desc, image, title, arrowClick }) => {
 					<motion.div
 						drag="x"
 						style={{ x, scale, cursor: 'grab' }}
-						dragTransition={{ ease: ease, restDelta: 0.2, power: 2 }}
 						animate={{ y: -45 }}
 						dragElastic={0.05}
 						className="product-image"
-						dragConstraints={{ left: -300, right: 0 }}
+						dragConstraints={{ left: -400, right: 0 }}
 						whileTap={{ cursor: 'grabbing' }}
 					>
-						<ProductImage image={image} />
+						<ProductImage image={image} onClick={imageClick} />
 					</motion.div>
 				</div>
 				<motion.div style={{ paddingBottom: down }} className="product-drag">

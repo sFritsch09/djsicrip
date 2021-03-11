@@ -9,18 +9,17 @@ export const Product = styled.div`
 			padding-bottom: 20px;
 		}
 		.product-content {
-			padding: 160px 0 24px;
+			padding: 90px 0 24px;
 
 			@media screen and (max-width: 800px) {
 				padding: 10px 0 24px;
 			}
 			@media screen and (min-width: 1800px) {
-				padding: 120px 0 24px;
+				padding: 100px 0 24px;
 			}
 
 			.product-content-inner {
 				color: ${(props) => props.theme.lightColor};
-				/* padding-bottom: 50px; */
 				h4 {
 					font-size: 14px;
 					margin: 0 0 16px 0;
@@ -138,12 +137,10 @@ export const Product = styled.div`
 			left: 300px;
 			display: flex;
 			align-items: center;
-			margin-bottom: 40px;
 
 			@media screen and (max-width: 900px) {
 				left: -60px;
 				height: 160px;
-				margin-bottom: 0px;
 			}
 
 			.product-image {
@@ -155,7 +152,7 @@ export const Product = styled.div`
 		.product-drag {
 			z-index: 2;
 			position: relative;
-			margin-bottom: 40px;
+			margin-bottom: 80px;
 			.product-drag-inner {
 				padding: 0 32px;
 				@media screen and (max-width: 900px) {

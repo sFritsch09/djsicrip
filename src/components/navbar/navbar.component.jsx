@@ -17,7 +17,6 @@ import {
 	NavDarkMode,
 } from './navbar.styles';
 import MobileNavbar from '../mobile-navbar/mobile-navbar.component';
-import { useNav } from '../hooks/NavContext';
 
 const Navbar = () => {
 	// is Mobile
@@ -42,7 +41,6 @@ const Navbar = () => {
 	// is scrolling
 	const [scroll, setScroll] = useState(0);
 	const [click, setClick] = useState(false);
-	const scrollContext = useNav();
 
 	const handleClick = () => setClick(!click);
 	useEffect(() => {
@@ -53,9 +51,6 @@ const Navbar = () => {
 			}
 		});
 	});
-	useEffect(() => {
-		setScroll(scrollContext);
-	}, [scrollContext]);
 	return (
 		<div>
 			{!isMobile ? (
