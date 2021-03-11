@@ -141,4 +141,5 @@ export const Spacer = styled.li`
 	list-style: none;
 	height: 60px;
 	width: 100%;
+	margin-bottom: 20px;
 `;
