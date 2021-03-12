@@ -5,6 +5,7 @@ import src from '../../images/profile-green.jpg';
 
 //Components
 import ScrollForMore from '../../components/scroll-for-more/scroll-for-more.component';
+import FAQ from './FAQ';
 //Ease
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 const imageDetails = {
@@ -147,6 +148,8 @@ const Fritsch = () => {
 					</div>
 				</Single>
 			</Empty>
+
+			<FAQ />
 		</div>
 	);
 };

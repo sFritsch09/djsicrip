@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 export const Main = styled.main`
@@ -124,7 +125,7 @@ export const Single = styled(motion.div)`
 			}
 		}
 		.bottom-row {
-			height: 100vh;
+			height: 60vh;
 			position: relative;
 			.bottom {
 				height: 200px;
@@ -151,4 +152,68 @@ export const Single = styled(motion.div)`
 
 export const Empty = styled.div`
 	padding-top: 80px;
+`;
+
+//NOTE FAQ List
+
+export const FaqContainer = styled(motion.ul)`
+	width: 900px;
+	flex-direction: column;
+	background: ${(props) => props.theme.lightColor};
+	padding: 20px;
+	border-radius: 10px;
+
+	@media screen and (max-width: 900px) {
+		width: 400px;
+	}
+`;
+
+export const ContentWrapper = styled(motion.li)`
+	background-color: ${(props) => props.theme.color};
+	padding: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	cursor: pointer;
+	border-radius: 10px;
+`;
+
+export const TextWrapper = styled.div`
+	width: 100%;
+	margin-top: 12px;
+	display: flex;
+	color: ${(props) => props.theme.Darkcolor};
+	justify-content: center;
+	align-items: center;
+`;
+
+export const TextContainer = styled(motion.div)``;
+
+export const FaqMain = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 80px;
+`;
+
+export const IconWrapper = styled.div`
+	font-size: 2rem;
+	vertical-align: center;
+	align-items: center;
+	margin-right: 20px;
+	color: ${(props) => props.theme.contrastDark};
+`;
+
+export const QuestWrapper = styled.div`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: ${(props) => props.theme.contrastDark};
+`;
+
+export const HyperLink = styled(Link)`
+	color: ${(props) => props.theme.contrastDark};
+	text-decoration: none;
+	z-index: 3;
+	margin-left: 4px;
 `;
