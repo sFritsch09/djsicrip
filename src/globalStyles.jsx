@@ -36,6 +36,7 @@ export const invertTheme = {
 	lightColor: '#83C5Be',
 	contrastDark: '#FFDDD2',
 	contrastColor: '#E29578',
+	darkColor: '#FFDDD2',
 };
 
 export default GlobalStyle;

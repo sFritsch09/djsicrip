@@ -63,8 +63,8 @@ const Logo = () => {
 						className="logo"
 						version="1.0"
 						xmlns="http://www.w3.org/2000/svg"
-						width="676.000000pt"
-						height="492.000000pt"
+						width="100%"
+						height="100%"
 						viewBox="0 0 676.000000 492.000000"
 						preserveAspectRatio="xMidYMid meet"
 						variants={pathVariants}
@@ -191,7 +191,12 @@ const Logo = () => {
 						</g>
 					</motion.svg>
 				</LogoContainer>
-				<VinylWrapper variants={vinylMotion} animate={animate} onTap={() => cycle()}>
+				<VinylWrapper
+					variants={vinylMotion}
+					whileHover="hover"
+					animate={animate}
+					onTap={() => cycle()}
+				>
 					<VinylImg />
 				</VinylWrapper>
 			</MainContainer>
