@@ -48,8 +48,8 @@ export const LogoWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 230px;
-	height: 230px;
+	width: 300px;
+	height: 300px;
 	overflow: hidden;
 	@media screen and (max-width: 900px) {
 		padding: 0;
