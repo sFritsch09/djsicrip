@@ -29,6 +29,7 @@ export const Angle = styled.div`
 
 export const Content = styled.div`
 	width: 100%;
+	align-items: center;
 	padding: 20px;
 	background-color: ${(props) => props.theme.darkColor};
 `;
@@ -113,11 +114,33 @@ export const CustomButton = styled(Link)`
 	}
 `;
 
+export const MusicContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`;
+
 export const MusicWrapper = styled.div`
-	width: 100%;
-	padding: 20px;
-	height: 100px;
+	width: 1500px;
+	height: 1100px;
+	padding: 20px 120px;
 	color: white;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	@media screen and (max-width: 1300px) {
+		width: 1200px;
+		height: 950px;
+	}
+
+	@media screen and (max-width: 1000px) {
+		width: 1000px;
+		height: 800px;
+	}
+	@media screen and (max-width: 900px) {
+		width: 900px;
+		height: 750px;
+	}
 `;

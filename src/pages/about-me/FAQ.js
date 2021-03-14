@@ -71,9 +71,9 @@ const FAQ = () => {
 		<FaqMain>
 			<AnimateSharedLayout>
 				<FaqContainer layout>
-					{items.map((item) => (
+					{items.map((item, index) => (
 						<Item
-							key={item}
+							key={index}
 							text={item.question}
 							answer={item.answer}
 							link={item.link}

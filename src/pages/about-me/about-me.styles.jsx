@@ -216,4 +216,9 @@ export const HyperLink = styled(Link)`
 	text-decoration: none;
 	z-index: 3;
 	margin-left: 4px;
+
+	&:hover {
+		transform: scale(1.1);
+		transition: all 0.05s ease-in-out;
+	}
 `;

@@ -39,6 +39,9 @@ export const NavbarContainer = styled.div`
 	padding-left: 60px;
 	@media screen and (max-width: 900px) {
 	}
+	@media screen and (max-width: 1050px) {
+		padding-left: 10px;
+	}
 `;
 
 export const MobileIcon = styled.div`
@@ -79,7 +82,11 @@ export const NavLogo = styled(Link)`
 	right: 0;
 	bottom: 0;
 
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 1050px) {
+		margin-right: 100px;
+	}
+
+	@media screen and (max-width: 980px) {
 		display: none;
 	}
 `;
@@ -136,7 +143,7 @@ export const NavItem = styled.li`
 export const NavLink = styled(Link)`
 	position: relative;
 	margin: 0 15px;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	color: ${(props) => props.theme.color};
 	display: flex;
 	justify-content: space-between;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { MenuItem } from './MenuItem';
-import { NavMenu, Spacer } from '../mobile-navbar.styles';
+import { NavMenu } from '../mobile-navbar.styles';
 import { BiMusic, BiFace, BiBriefcaseAlt2, BiEuro, BiChat } from 'react-icons/bi';
 import DarkModeToggle from 'react-dark-mode-toggle';
 
