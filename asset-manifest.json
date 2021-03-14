@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/djsicrip/static/js/main.366c2a8d.chunk.js",
-    "main.js.map": "/djsicrip/static/js/main.366c2a8d.chunk.js.map",
-    "runtime-main.js": "/djsicrip/static/js/runtime-main.b784b9c4.js",
-    "runtime-main.js.map": "/djsicrip/static/js/runtime-main.b784b9c4.js.map",
-    "static/css/2.90a5df8f.chunk.css": "/djsicrip/static/css/2.90a5df8f.chunk.css",
-    "static/js/2.0ea1e2b6.chunk.js": "/djsicrip/static/js/2.0ea1e2b6.chunk.js",
-    "static/js/2.0ea1e2b6.chunk.js.map": "/djsicrip/static/js/2.0ea1e2b6.chunk.js.map",
-    "static/js/3.41b8cff9.chunk.js": "/djsicrip/static/js/3.41b8cff9.chunk.js",
-    "static/js/3.41b8cff9.chunk.js.map": "/djsicrip/static/js/3.41b8cff9.chunk.js.map",
+    "main.js": "/djsicrip/static/js/main.4c42202b.chunk.js",
+    "main.js.map": "/djsicrip/static/js/main.4c42202b.chunk.js.map",
+    "runtime-main.js": "/djsicrip/static/js/runtime-main.e0d846cc.js",
+    "runtime-main.js.map": "/djsicrip/static/js/runtime-main.e0d846cc.js.map",
+    "static/css/2.28c3a46d.chunk.css": "/djsicrip/static/css/2.28c3a46d.chunk.css",
+    "static/js/2.9ceff348.chunk.js": "/djsicrip/static/js/2.9ceff348.chunk.js",
+    "static/js/2.9ceff348.chunk.js.map": "/djsicrip/static/js/2.9ceff348.chunk.js.map",
+    "static/js/3.fef22c9a.chunk.js": "/djsicrip/static/js/3.fef22c9a.chunk.js",
+    "static/js/3.fef22c9a.chunk.js.map": "/djsicrip/static/js/3.fef22c9a.chunk.js.map",
     "index.html": "/djsicrip/index.html",
     "service-worker.js": "/djsicrip/service-worker.js",
     "service-worker.js.map": "/djsicrip/service-worker.js.map",
-    "static/css/2.90a5df8f.chunk.css.map": "/djsicrip/static/css/2.90a5df8f.chunk.css.map",
-    "static/js/2.0ea1e2b6.chunk.js.LICENSE.txt": "/djsicrip/static/js/2.0ea1e2b6.chunk.js.LICENSE.txt",
+    "static/css/2.28c3a46d.chunk.css.map": "/djsicrip/static/css/2.28c3a46d.chunk.css.map",
+    "static/js/2.9ceff348.chunk.js.LICENSE.txt": "/djsicrip/static/js/2.9ceff348.chunk.js.LICENSE.txt",
     "static/media/Background-Gradient.fd21470a.jpg": "/djsicrip/static/media/Background-Gradient.fd21470a.jpg",
     "static/media/Crip-Beatz.5f645e53.png": "/djsicrip/static/media/Crip-Beatz.5f645e53.png",
     "static/media/KontrollS2Front.0cdce882.png": "/djsicrip/static/media/KontrollS2Front.0cdce882.png",
@@ -28,9 +28,9 @@
     "static/media/vinyl.7797e5cd.svg": "/djsicrip/static/media/vinyl.7797e5cd.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b784b9c4.js",
-    "static/css/2.90a5df8f.chunk.css",
-    "static/js/2.0ea1e2b6.chunk.js",
-    "static/js/main.366c2a8d.chunk.js"
+    "static/js/runtime-main.e0d846cc.js",
+    "static/css/2.28c3a46d.chunk.css",
+    "static/js/2.9ceff348.chunk.js",
+    "static/js/main.4c42202b.chunk.js"
   ]
 }
