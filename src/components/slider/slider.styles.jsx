@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Label from '../../images/Crip-Beatz.png';
+import Label from '../../images/Crip-Beatz.jpg';
 import Background from '../../images/Background-Gradient.jpg';
 import { ReactComponent as Logo } from '../../images/sicriptext.svg';
 
